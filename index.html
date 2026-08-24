@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TBD.">
+    <title>An Ngo - IMCJ</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- # INTRO MEMORY — Hides the intro before the page draws when it has already played in this browser tab. -->
+    <script>
+        try {
+            if (sessionStorage.getItem("portfolioIntroPlayed") === "true") {
+                document.documentElement.classList.add("intro-seen")
+            }
+        } catch (error) {
+            // The intro still works normally if browser storage is unavailable.
+        }
+    </script>
+</head>
+<body class="intro-playing">
+    <!-- # OPENING SEQUENCE — Replace each frame's text with an image when your animation artwork is ready. -->
+    <div class="intro" id="intro" aria-label="Opening animation">
+        <div class="intro-frame intro-frame-one" aria-hidden="true">
+            <span>01</span>
+            <p>WELCOME</p>
+        </div>
+        <div class="intro-frame intro-frame-two" aria-hidden="true">
+            <span>02</span>
+            <p>TO</p>
+        </div>
+        <div class="intro-frame intro-frame-three" aria-hidden="true">
+            <span>03</span>
+            <p>MY WORLD</p>
+        </div>
+        <button class="skip-intro" id="skipIntro" type="button">Skip intro</button>
+    </div>
+
+    <!-- # HEADER — edit or remove either navigation link. -->
+    <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="Back to top"><img class="header-logo" src="Logo1.png" alt="" draggable="false">imcj<span>®</span></a>
+        <nav aria-label="Main navigation">
+            <a href="#top" aria-current="page">Home</a>
+            <a href="#work">Projects</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <!-- # HERO LAYERS — Keep this order: rear Dustpoms, identity, character, then front Dustpoms. -->
+        <section class="hero" aria-labelledby="hero-title">
+            <img class="hero-layer hero-dustpoms-back" src="backside dustpoms.png" alt="" draggable="false">
+
+            <!-- # HERO IDENTITY — Change the name here; its layer stays behind the main character. -->
+            <div class="hero-identity">
+                <h1 id="hero-title">I M C J</h1>
+            </div>
+
+            <!-- # SCROLLING TITLES — Edit both copies identically to keep the horizontal loop seamless. -->
+            <div class="hero-marquee" aria-label="Game Designer, Illustrator, Graphic Designer">
+                <div class="hero-marquee-track">
+                    <div class="hero-marquee-group">
+                        <span>Game Designer / Illustrator / Graphic Designer / </span>
+                        <span aria-hidden="true">Game Designer / Illustrator / Graphic Designer / </span>
+                    </div>
+                    <div class="hero-marquee-group" aria-hidden="true">
+                        <span>Game Designer / Illustrator / Graphic Designer / </span>
+                        <span>Game Designer / Illustrator / Graphic Designer / </span>
+                    </div>
+                </div>
+            </div>
+
+            <img class="hero-layer hero-character" src="main chara.png" alt="A hand-drawn character sitting among Dustpoms" draggable="false">
+            <img class="hero-layer hero-dustpoms-front" src="front dustpoms.png" alt="" draggable="false">
+        </section>
+
+        <!-- # ABOUT — Keep this as one short sentence; around 8–16 words works best. -->
+        <section class="about" id="about" aria-labelledby="about-title">
+            <p class="section-number">01 / WELCOME</p>
+            <h2 id="about-title">I draw and make visual novels :D</h2>
+        </section>
+
+        <!-- # WORK SELECTOR — Edit the title and instruction here; card behaviour lives in scene.js. -->
+        <section class="work" id="work" aria-labelledby="work-title">
+            <div class="work-heading">
+                <div>
+                    <p class="section-number">02 / FEATURED WORKS</p>
+                    <!-- <h2 id="work-title">Click a card.<br>Watch it drop.</h2> -->
+                    <h2 id="work-title">Click a card.</h2>
+                </div>
+                <p class="work-instruction">Drop a category card in to see projects.<br>Click the card in the slot to put it back.</p>
+            </div>
+
+            <!-- # SELECTOR ROW — The three cards sit on the left and the category slot sits on their right. -->
+            <div class="category-selector-row">
+                <!-- # CATEGORY CARDS — Rename the visible labels here and match their data-category names in scene.js. -->
+                <div class="category-deck" id="categoryDeck" aria-label="Portfolio categories">
+                    <button class="category-card games-card" type="button" data-category="games" aria-pressed="false">
+                        <span class="card-index">01</span>
+                        <span class="card-title">Games</span>
+                        <span class="card-action">Click to select</span>
+                    </button>
+
+                    <button class="category-card illustration-card" type="button" data-category="illustration" aria-pressed="false">
+                        <span class="card-index">02</span>
+                        <span class="card-title">Illustration</span>
+                        <span class="card-action">Click to select</span>
+                    </button>
+
+                    <button class="category-card graphics-card" type="button" data-category="graphics" aria-pressed="false">
+                        <span class="card-index">03</span>
+                        <span class="card-title">Graphics</span>
+                        <span class="card-action">Click to select</span>
+                    </button>
+                </div>
+
+                <!-- # CARD SLOT — This fills automatically; edit only the empty-state wording if desired. -->
+                <div class="slot-area">
+                    <p class="slot-label">CATEGORY SLOT</p>
+                    <div class="card-slot" id="cardSlot" aria-live="polite">
+                        <div class="slot-empty" id="slotEmpty">
+                            <p>SELECTED CARD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- # PROJECT LIST — Project names and descriptions are customized in scene.js. -->
+            <section class="projects" id="projects" aria-labelledby="projectsTitle" hidden>
+                <div class="projects-heading">
+                    <div>
+                        <p class="section-number">Displaying</p>
+                        <h3 id="projectsTitle">Projects</h3>
+                    </div>
+                    <p>Scroll sideways →</p>
+                </div>
+                <div class="project-track" id="projectTrack"></div>
+            </section>
+
+            <p class="selection-status sr-only" id="selectionStatus" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <!-- # FOOTER — Replace the name, year, and email address with your own details. -->
+    <footer>
+        <p>imcj © 2026</p>
+        <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <!-- # INTERACTIONS — scene.js controls the intro, card movement, and project content. -->
+    <script src="scene.js"></script>
+</body>
+</html>
