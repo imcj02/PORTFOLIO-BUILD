@@ -1,27 +1,32 @@
 // # PROJECT SETTINGS — Edit titles and short descriptions here; add or remove items inside each projects list.
 const projectData = {
     games: {
-        title: "Game projects",
+        title: "Games",
         projects: [
             { title: "Eye Candy", note: "Visual Novel / 2026", image: "banner_eyecandy.png", url: "eye-candy.html" },
-            { title: "OUT", note: "VR Experience / 2026", image: "banner_out.png", url: "out.html" },
             { title: "CROSSROADS", note: "Visual Novel / 2024", image: "banner_crossroads.png", url: "crossroads.html" },
+            { title: "OUT", note: "VR Experience / 2026", image: "banner_out.png", url: "out.html" },
+        ],
+    },
+    prototype: {
+        title: "Prototype (WIP)",
+        projects: [
+            { title: "IDENTITY", note: "Visual Novel / 2025", image: "banner_identity.png", url: "identity.html" },
+            { title: "Simply Attraction", note: "RPG / 2025", image: "banner_simplyattraction.png", url: "simply-attraction.html" },
+            { title: "In The Moment", note: "Point-n-click / 2025", image: "banner_inthemoment.PNG", url: "in-the-moment.html" },
+            { title: "A Candy A Day (Original)", note: "Visual Novel / 2025", image: "banner_acadoriginal.png", url: "a-candy-a-day.html" },
         ],
     },
     illustration: {
-        title: "Illustration projects",
+        title: "Illustration",
+        layout: "gallery",
         projects: [
-            { title: "TBD", note: "Personal work / 2026" },
-            { title: "TBD", note: "Personal work / 2025" },
-            { title: "TBD", note: "Digital illustration / 2025" },
-        ],
-    },
-    graphics: {
-        title: "Graphic projects",
-        projects: [
-            { title: "Visual Identity", note: "Brand system / 2026" },
-            { title: "Poster Series", note: "Print design / 2025" },
-            { title: "Publication", note: "Editorial design / 2025" },
+            { title: "TBD", note: "[Notes / Year]",image: "banner_acadoriginal.png"},
+            { title: "TBD", note: "[Notes / Year]", image: "banner_acadoriginal.png" },
+            { title: "TBD", note: "[Notes / Year]", image: "banner_acadoriginal.png" },
+            { title: "TBD", note: "[Notes / Year]", image: "banner_acadoriginal.png" },
+            { title: "TBD", note: "[Notes / Year]", image: "banner_acadoriginal.png" },
+            { title: "TBD", note: "[Notes / Year]", image: "banner_acadoriginal.png" },
         ],
     },
 }
@@ -33,6 +38,7 @@ const categoryButtons = [...document.querySelectorAll(".category-card")]
 const cardSlot = document.querySelector("#cardSlot")
 const projects = document.querySelector("#projects")
 const projectsTitle = document.querySelector("#projectsTitle")
+const projectsHint = document.querySelector("#projectsHint")
 const projectTrack = document.querySelector("#projectTrack")
 const selectionStatus = document.querySelector("#selectionStatus")
 
@@ -62,7 +68,7 @@ function finishIntro() {
     }
 }
 
-// # INTRO START SETTING — Returning from About skips immediately; a first visit plays for 2250ms.
+// # INTRO START SETTING
 if (introAlreadyPlayed) {
     finishIntro()
 } else {
@@ -107,11 +113,32 @@ function makeProjectCard(project, index) {
     return article
 }
 
-// # SHOW PROJECTS — Updates the heading and horizontal list after a category is selected.
+// # BUILD ILLUSTRATION GALLERY ITEM — Add an image filename to an illustration above to replace its placeholder.
+function makeGalleryItem(item, index) {
+    const figure = document.createElement("figure")
+    figure.className = "gallery-item"
+    const artwork = item.image
+        ? `<img src="${item.image}" alt="${item.title}" loading="lazy">`
+        : `<span class="gallery-placeholder">IMAGE PLACEHOLDER ${String(index + 1).padStart(2, "0")}</span>`
+
+    figure.innerHTML = `
+        <div class="gallery-image">${artwork}</div>
+        <figcaption class="gallery-caption">
+            <h4>${item.title}</h4>
+            <p>${item.note}</p>
+        </figcaption>
+    `
+    return figure
+}
+
+// # SHOW PROJECTS — Uses a gallery only for Illustration; other categories keep the horizontal list.
 function renderProjects(category) {
     const data = projectData[category]
+    const isGallery = data.layout === "gallery"
     projectsTitle.textContent = data.title
-    projectTrack.replaceChildren(...data.projects.map(makeProjectCard))
+    projectsHint.textContent = isGallery ? "Gallery view" : "Scroll sideways for more projects →"
+    projectTrack.classList.toggle("is-gallery", isGallery)
+    projectTrack.replaceChildren(...data.projects.map(isGallery ? makeGalleryItem : makeProjectCard))
     projects.hidden = false
     projects.classList.remove("is-visible")
     requestAnimationFrame(() => projects.classList.add("is-visible"))

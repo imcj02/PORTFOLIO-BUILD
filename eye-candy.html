@@ -6,6 +6,11 @@
     <meta name="description" content="Eye Candy — a visual novel project by imcj.">
     <title>Eye Candy — imcj</title>
     <link rel="stylesheet" href="style.css">
+    <!-- # CASE STUDY STYLES — Include this file on any page that reuses the sections below. -->
+    <link rel="stylesheet" href="project-sections.css">
+    <!-- # GALLERY VIEWER — Include this script on other pages to make their case-study images expandable. -->
+    <script defer src="gallery-viewer.js"></script>
+
 </head>
 <body class="project-page-body">
     <!-- # PROJECT PAGE HEADER — Keep these links matched with the Home and About headers. -->
@@ -20,33 +25,133 @@
 
     <main class="project-page-main">
         <article class="project-detail">
-            <!-- # EYE CANDY TITLE — Edit the project name and short description here. -->
-            <header class="project-detail-heading">
-                <div>
+            <section class="project-landing" aria-labelledby="eye-candy-title">
+                <div class="project-landing-copy">
+                    <!-- # EYE CANDY TITLE — Edit the project number and name here. -->
+                    <header class="project-detail-heading">
                     <p class="section-number">PROJECT / 01</p>
-                    <h1>Eye Candy</h1>
-                </div>
-                <p class="project-detail-type">Visual Novel / 2026</p>
-            </header>
+                        <h1 id="eye-candy-title">Eye Candy</h1>
+                    </header>
 
-            <!-- # EYE CANDY BANNER — Replace this filename if you update the project banner. -->
-            <img class="project-detail-banner" src="banner_eyecandy.png" alt="Eye Candy project banner">
+                    <!-- # EYE CANDY TAGS — Replace each item with the final project type, year, duration, team, tools, and role. -->
+                    <ul class="project-tag-list" aria-label="Eye Candy project information">
+                        <li>Visual Novel</li>
+                        <li>2026</li>
+                        <li>2 months</li>
+                        <li>Solo Project</li>
+                        <li>Ren'Py, Photoshop, Procreate</li>
+                        <li>Storywriting, Character Design, Illustration, Programming</li>
+                    </ul>
 
-            <section class="project-detail-information" aria-labelledby="eye-candy-details">
-                <p class="section-number">ABOUT THE PROJECT</p>
-                <div class="project-detail-copy">
-                    <h2 id="eye-candy-details">Project details</h2>
-                    <p>Add your detailed Eye Candy project description, role, process, tools, and outcome here.</p>
+                    <!-- # EYE CANDY DESCRIPTION — Replace this placeholder with your final project summary. -->
+                    <div class="project-detail-description">
+                        <p class="section-number">PROJECT DESCRIPTION</p>
+                        <p>This is a narrative-driven visual novel with turn-based combat that explores cognitive bias, perception, and manipulation through the lens of a seemingly cute magical girl adventure. 
+                        <br>
+                        <br>Eye Candy takes place in a colorful world following Melus, a magical girl partnered with a cute floating companion - also is an alchemist named Ipulus. However, beneath the cheerful presentation lies another reality. As the story progresses, players can discover that their understanding of the world may be built on false assumptions and hallucinations. The project uses player perception itself as part of the gameplay experience, encouraging players to question what they believe to be true.</p>
+                    </div>
                 </div>
+
+                <!-- # EYE CANDY POSTER — Change the filename here when a project-specific poster is ready. -->
+                <img class="project-poster" src="poster_eyecandy.png" alt="Eye Candy project poster">
             </section>
 
             <a class="project-page-back" href="index.html#work">← Back to projects</a>
         </article>
+
+        <div class="case-study">
+            <!-- # SECTION 01 — Replace the bracketed explanation with your own process and design decisions. -->
+            <section class="case-study-section" aria-labelledby="character-design-title">
+                <div class="case-study-heading">
+                    <!-- # SECTION TITLE — Keep the number above the Schoolbell heading in the left column. -->
+                    <header class="case-study-title">
+                        <p class="case-study-number">01</p>
+                        <h2 id="character-design-title">Characters & Sprites</h2>
+                    </header>
+                    <div class="case-study-copy">
+                        <p><b>Main character - Magical Girl Melus. Companion Ipulus and Fallen Magical Girl Dawn</b>
+                        </p>
+                        <!-- <p>[Use this paragraph to walk through your design process, from early silhouettes and outfit studies to expressions and final character sheets. Discuss a design choice you revised, why you changed it, and how the finished artwork supports the character’s role in CROSSROADS.]</p> -->
+                    </div>
+                </div>
+                <!-- # THREE-COLUMN GALLERY — Add figures in reading order; every three images start a new row.
+                     Replace a placeholder span with <img src="your-image.png" alt="Describe your artwork" loading="lazy">.
+                     Images keep their proportions and are never cropped. -->
+                <div class="case-study-gallery" role="region" aria-label="Character Design image gallery">
+                    <figure class="case-study-image"><img src="eyecandy/melusconcept.png" alt="image-01" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/melussprite1.png" alt="image-02" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/melussprite2.png" alt="image-03" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/melusbattle1.png" alt="image-04" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/melusbattle2.png" alt="image-05" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/melusalt.png" alt="image-06" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/ipulusconcept.png" alt="image-07" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/ipulus.png" alt="image-08" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/bosspulus.png" alt="image-09" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/dawnsketch.png" alt="image-10" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/dawnsprite.png" alt="image-11" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/dawnsprite2.png" alt="image-12" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/monsters.png" alt="image-13" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/bosspulus2.png" alt="image-14" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/dawn.png" alt="image-15" loading="lazy"></figure>
+                </div>
+            </section>
+        <!-- # SECTION 01 — Replace the bracketed explanation with your own process and design decisions. -->
+            <section class="case-study-section" aria-labelledby="character-design-title">
+                <div class="case-study-heading">
+                    <!-- # SECTION TITLE — Keep the number above the Schoolbell heading in the left column. -->
+                    <header class="case-study-title">
+                        <p class="case-study-number">01</p>
+                        <h2 id="character-design-title">Backgrounds & UIs</h2>
+                    </header>
+                    <div class="case-study-copy">
+                        <p><b>Story Backgrounds, Turn-based Battle UI, In-game Screenshots.</b>
+                        </p>
+                        <!-- <p>[Use this paragraph to walk through your design process, from early silhouettes and outfit studies to expressions and final character sheets. Discuss a design choice you revised, why you changed it, and how the finished artwork supports the character’s role in CROSSROADS.]</p> -->
+                    </div>
+                </div>
+                <!-- # THREE-COLUMN GALLERY — Add figures in reading order; every three images start a new row.
+                     Replace a placeholder span with <img src="your-image.png" alt="Describe your artwork" loading="lazy">.
+                     Images keep their proportions and are never cropped. -->
+                <div class="case-study-gallery" role="region" aria-label="Character Design image gallery">
+                    <figure class="case-study-image"><img src="eyecandy/bg bedroom.PNG" alt="image-01" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/bg uphill.PNG" alt="image-02" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/bg ipulus house.PNG" alt="image-03" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/bg forest.png" alt="image-04" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/screen 3.png" alt="image-05" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/bg lair.png" alt="image-06" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/bg dark lair.png" alt="image-07" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/screen 4.png" alt="image-08" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/bg housepulus.png" alt="image-09" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/screen 1.png" alt="image-10" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/cg ipulus hug.png" alt="image-11" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="eyecandy/screen 3.png" alt="image-12" loading="lazy"></figure>
+            </section>
+        <!-- # SECTION 04 — Replace the explanation and change the video ID in BOTH URLs when reusing this block. -->
+            <section class="case-study-section" aria-labelledby="playthrough-title">
+                <div class="case-study-heading">
+                    <!-- # SECTION TITLE — Keep the number above the Schoolbell heading in the left column. -->
+                    <header class="case-study-title">
+                        <p class="case-study-number">04</p>
+                        <h2 id="playthrough-title">Playthrough Demo</h2>
+                    </header>
+                    <div class="case-study-copy">
+                        <p>Play Demo of early version Eye Candy.</p>
+                    </div>
+                </div>
+                <!-- # VIDEO PLAYER — Responsive 16:9 player; playback starts only when the visitor chooses it. -->
+                <div class="case-study-video">
+                    <iframe src="https://www.youtube-nocookie.com/embed/MAmcUmsu0eQ"
+                        title="Eye Candy - Play Demo" loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="case-study-video-link"><a href="https://youtu.be/MAmcUmsu0eQ" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></p>
+            </section>        
     </main>
 
     <footer>
         <p>imcj © 2026</p>
-        <a href="index.html#work">Back to projects ↑</a>
+        <a href="#top">Back to top ↑</a>
     </footer>
 </body>
 </html>

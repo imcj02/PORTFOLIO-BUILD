@@ -6,6 +6,11 @@
     <meta name="description" content="OUT — a VR experience project by imcj.">
     <title>OUT — imcj</title>
     <link rel="stylesheet" href="style.css">
+    <!-- # CASE STUDY STYLES — Include this file on any page that reuses the sections below. -->
+    <link rel="stylesheet" href="project-sections.css">
+    <!-- # GALLERY VIEWER — Include this script on other pages to make their case-study images expandable. -->
+    <script defer src="gallery-viewer.js"></script>
+
 </head>
 <body class="project-page-body">
     <!-- # PROJECT PAGE HEADER — Keep these links matched with the Home and About headers. -->
@@ -20,33 +25,149 @@
 
     <main class="project-page-main">
         <article class="project-detail">
-            <!-- # OUT TITLE — Edit the project name and short description here. -->
-            <header class="project-detail-heading">
-                <div>
-                    <p class="section-number">PROJECT / 02</p>
-                    <h1>OUT</h1>
-                </div>
-                <p class="project-detail-type">VR Experience / 2026</p>
-            </header>
+            <section class="project-landing" aria-labelledby="out-title">
+                <div class="project-landing-copy">
+                    <!-- # OUT TITLE — Edit the project number and name here. -->
+                    <header class="project-detail-heading">
+                    <p class="section-number">PROJECT / 03</p>
+                        <h1 id="out-title">OUT</h1>
+                    </header>
 
-            <!-- # OUT BANNER — Replace this filename if you update the project banner. -->
-            <img class="project-detail-banner" src="banner_out.png" alt="OUT project banner">
+                    <!-- # OUT TAGS — Replace each item with the final project type, year, duration, team, tools, and role. -->
+                    <ul class="project-tag-list" aria-label="OUT project information">
+                        <li>VR Experience</li>
+                        <li>2026</li>
+                        <li>2 Weeks</li>
+                        <li>Group Project - 4 people</li>
+                        <li>Unity, Photoshop</li>
+                        <li>Concept, Level Design, Textures, Sub-Programmer</li>
+                    </ul>
 
-            <section class="project-detail-information" aria-labelledby="out-details">
-                <p class="section-number">ABOUT THE PROJECT</p>
-                <div class="project-detail-copy">
-                    <h2 id="out-details">Project details</h2>
-                    <p>Add your detailed OUT project description, role, process, tools, and outcome here.</p>
+                    <!-- # OUT DESCRIPTION — Replace this placeholder with your final project summary. -->
+                    <div class="project-detail-description">
+                        <p class="section-number">PROJECT DESCRIPTION</p>
+                        <p>OUT - by Team Zero Zero Seven 
+                        <br>
+                        <br>A VR experience that places you inside a maze steeped in darkness, where only the guidance of a clown fish can help you to find your way OUT. 
+                        <br>
+                        <br>You are lost in the dark, then you find Nimo the little fish! He is a playful guy and he will lead you through the water. When you need direction, a specific hand gesture can help you find where Nimo has gone to. What will be waiting for you when you find him? 
+                        <br>
+                        <br>In this project, together with the use of spatial sounds, we brought in live hand gesture tracking as the control and attempted to implement the buoyancy of underwater movement to create an immersive experience.
+                        <br>
+                        <br><i>Credits to my other teammates: Jiawen Hu, Xinyan Chen, Holly Lamprey</i>
+                        </p>
+                    </div>
                 </div>
+
+                <!-- # OUT POSTER — Change the filename here when a project-specific poster is ready. -->
+                <img class="project-poster" src="poster_out.png" alt="OUT project poster">
             </section>
 
             <a class="project-page-back" href="index.html#work">← Back to projects</a>
         </article>
+    
+    <div class="case-study">
+            <!-- # SECTION 01 — Replace the bracketed explanation with your own process and design decisions. -->
+            <section class="case-study-section" aria-labelledby="character-design-title">
+                <div class="case-study-heading">
+                    <!-- # SECTION TITLE — Keep the number above the Schoolbell heading in the left column. -->
+                    <header class="case-study-title">
+                        <p class="case-study-number">01</p>
+                        <h2 id="character-design-title">Concept & Functions</h2>
+                    </header>
+                    <div class="case-study-copy">
+                        <p>The development and concept from me. Programming done by me and Jiawen Hu.</p>
+                        <!-- <p>[Use this paragraph to walk through your design process, from early silhouettes and outfit studies to expressions and final character sheets. Discuss a design choice you revised, why you changed it, and how the finished artwork supports the character’s role in CROSSROADS.]</p> -->
+                    </div>
+                </div>
+                <!-- # THREE-COLUMN GALLERY — Add figures in reading order; every three images start a new row.
+                     Replace a placeholder span with <img src="your-image.png" alt="Describe your artwork" loading="lazy">.
+                     Images keep their proportions and are never cropped. -->
+                <div class="case-study-gallery" role="region" aria-label="Character Design image gallery">
+                    <figure class="case-study-image"><img src="out/4.PNG" alt="Anh Thu Sprites" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="out/5.PNG" alt="Linh Dan Sprites" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="out/6.PNG" alt="Thai Duong Sprites" loading="lazy"></figure>
+                </div>
+            </section>
+
+            <!-- # SECTION 02 — Replace the bracketed explanation with your own process and design decisions. -->
+            <section class="case-study-section" aria-labelledby="character-design-title">
+                <div class="case-study-heading">
+                    <!-- # SECTION TITLE — Keep the number above the Schoolbell heading in the left column. -->
+                    <header class="case-study-title">
+                        <p class="case-study-number">02</p>
+                        <h2 id="character-design-title">Design</h2>
+                    </header>
+                    <div class="case-study-copy">
+                        <p>Level Design, 3D Models and Shaders. Level and Shaders by me. Models made by Xinyan Chen.</p>
+                    </div>
+                </div>
+                <!-- # THREE-COLUMN GALLERY — Add figures in reading order; every three images start a new row.
+                     Replace a placeholder span with <img src="your-image.png" alt="Describe your artwork" loading="lazy">.
+                     Images keep their proportions and are never cropped. -->
+                <div class="case-study-gallery" role="region" aria-label="Character Design image gallery">
+                    <figure class="case-study-image"><img src="out/9.PNG" alt="Anh Thu Sprites" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="out/12.png" alt="Linh Dan Sprites" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="out/13.png" alt="Thai Duong Sprites" loading="lazy"></figure>
+                </div>
+            </section>
+
+            <!-- # SECTION 03 — Replace the bracketed explanation with your own process and design decisions. -->
+            <section class="case-study-section" aria-labelledby="character-design-title">
+                <div class="case-study-heading">
+                    <!-- # SECTION TITLE — Keep the number above the Schoolbell heading in the left column. -->
+                    <header class="case-study-title">
+                        <p class="case-study-number">03</p>
+                        <h2 id="character-design-title">Team Gallery</h2>
+                    </header>
+                    <div class="case-study-copy">
+                        <p>We showcased OUT in:
+                        <br><b>ACMI x RMIT Audience Lab (Sep 2026)</b>
+                        <br><b>Melbourne XR Open Lab: Immerse Australia x RMIT x SIGGRAPH Melbourne (Sep 2026)</b>
+                        <br>Upcoming event:
+                        <br><b>MAGI x Digital Media WIP Night (Oct 2026)</b>
+                        <br><b>MAGI EXPO 2026 (Nov 2026)</b></p>
+                    </div>
+                </div>
+                <!-- # THREE-COLUMN GALLERY — Add figures in reading order; every three images start a new row.
+                     Replace a placeholder span with <img src="your-image.png" alt="Describe your artwork" loading="lazy">.
+                     Images keep their proportions and are never cropped. -->
+                <div class="case-study-gallery" role="region" aria-label="Character Design image gallery">
+                    <figure class="case-study-image"><img src="out/pic1.PNG" alt="Anh Thu Sprites" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="out/pic2.png" alt="Linh Dan Sprites" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="out/pic3.png" alt="Thai Duong Sprites" loading="lazy"></figure>
+                </div>
+            </section>
+
+            <!-- # SECTION 04 — Replace the explanation and change the video ID in BOTH URLs when reusing this block. -->
+            <section class="case-study-section" aria-labelledby="playthrough-title">
+                <div class="case-study-heading">
+                    <!-- # SECTION TITLE — Keep the number above the Schoolbell heading in the left column. -->
+                    <header class="case-study-title">
+                        <p class="case-study-number">04</p>
+                        <h2 id="playthrough-title">Playthrough Demo</h2>
+                    </header>
+                    <div class="case-study-copy">
+                        <p>Full playthrough of CROSSROADS from RPG Visual on Youtube!</p>
+                    </div>
+                </div>
+                <!-- # VIDEO PLAYER — Responsive 16:9 player; playback starts only when the visitor chooses it. -->
+                <div class="case-study-video">
+                    <iframe src="https://www.youtube-nocookie.com/embed/K7zIj3STHw0"
+                        title="OUT Full Playthrough" loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="case-study-video-link"><a href="https://youtu.be/K7zIj3STHw0" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></p>
+            </section>
+
+
+        </div>
     </main>
 
     <footer>
         <p>imcj © 2026</p>
-        <a href="index.html#work">Back to projects ↑</a>
+        <a href="#top">Back to top ↑</a>
     </footer>
 </body>
 </html>

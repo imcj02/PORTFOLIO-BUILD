@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="About An">
-    <title>About — An Ngo</title>
+    <meta name="description" content="About imcj">
+    <title>About — imcj</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="about-page-body">
-    <!-- # ABOUT PAGE HEADER — Keep these categories and labels matched with the landing-page header. -->
+    <!-- # ABOUT PAGE BACKUP — This preserves the About layout from before the sectioned redesign. -->
     <header class="site-header about-page-header">
         <a class="wordmark" href="index.html" aria-label="Return to home"><img class="header-logo" src="Logo1.png" alt="" draggable="false">imcj<span>®</span></a>
         <nav aria-label="Main navigation">
@@ -19,38 +19,40 @@
     </header>
 
     <main class="about-page-main">
-        <!-- # ABOUT PROFILE — Replace the photo placeholder with your portrait and rewrite the text on the right. -->
         <section class="about-profile" aria-labelledby="about-page-title">
-            <div class="about-photo" role="img" aria-label="Placeholder for a photo">
-                <p>PHOTO PLACEHOLDER</p>
-            </div>
+            <!-- # ABOUT PHOTO — Replace about_photo.jpeg with another portrait while keeping this class for the same crop. -->
+            <img class="about-photo" src="about_photo.jpeg" alt="Portrait of An Ngo">
 
             <div class="about-copy">
                 <p class="section-number">ABOUT / PROFILE</p>
                 <h1 id="about-page-title">Hello, I’m imcj.</h1>
                 <div class="about-detail-placeholder">
-                    <p>I also go by An Ngo. I’m an illustrator, graphic designer and currently making 2D-based narrative games. Currently based in Melbourne, VIC.</p>
+                    <p>I also go by An Ngo. I’m an <b>Illustrator</b>, <b>Visual Novel / Narrative Game Maker</b> and a <b>Graphic Designer</b> on the side. Currently based in Melbourne, VIC.</p>
                     <p>I like to look at cute things and draw silly creatures.</p>
-                    <p>I graduated bachelor of Design Studies and I'm currently a student in Master of Animation, Games and Interactivity in RMIT University. My main tools are Ren'Py, Photoshop and Procreate.</p>
+                    <p>I graduated <b>Bachelor of Design Studies</b> and I'm currently a student in <b>Master of Animation, Games and Interactivity</b> in RMIT University.</p>
+                    <p>My main tools are <b>Ren'Py</b>, <b>Photoshop</b> and <b>Procreate</b>.</p>
                 </div>
 
-                <!-- # CONTACT PLATFORM PLACEHOLDERS — Replace each square with a social icon and wrap it in your profile link later. -->
-                <div class="about-contact-platforms" aria-label="Contact platform placeholders">
+                <div class="about-contact-platforms" aria-label="Social media links">
                     <p class="contact-platforms-label">Find me online</p>
                     <div class="contact-icon-row">
-                        <span class="contact-icon-placeholder" role="img" aria-label="Insta placeholder">01</span>
-                        <span class="contact-icon-placeholder" role="img" aria-label="Itch io placeholder">02</span>
-                        <span class="contact-icon-placeholder" role="img" aria-label="Linkedin placeholder">03</span>
-                        <!-- <span class="contact-icon-placeholder" role="img" aria-label=" placeholder">04</span> -->
+                        <!-- # SOCIAL ICON LINKS — Change each href to update the destination; replace the matching PNG to change an icon. -->
+                        <a class="contact-icon-button" href="https://www.instagram.com/im.imcj/" target="_blank" rel="noopener noreferrer" aria-label="Visit imcj on Instagram">
+                            <img src="icon_ins.png" alt="" draggable="false">
+                        </a>
+                        <a class="contact-icon-button" href="https://www.linkedin.com/in/anngo-imcj" target="_blank" rel="noopener noreferrer" aria-label="Visit An Ngo on LinkedIn">
+                            <img src="icon_linkedin.png" alt="" draggable="false">
+                        </a>
+                        <a class="contact-icon-button" href="https://imcj02.itch.io/" target="_blank" rel="noopener noreferrer" aria-label="Visit imcj on itch.io">
+                            <img src="icon_itchio.png" alt="" draggable="false">
+                        </a>
                     </div>
                 </div>
 
-                <!-- # BACK TO MAIN MENU — This underlined link returns visitors to the landing page. -->
                 <a class="back-main-menu" href="index.html">Back to main menu</a>
             </div>
         </section>
 
-        <!-- # EMAIL ACTION — Replace the example email address in both the link destination and visible text. -->
         <section class="email-action" aria-labelledby="email-action-title">
             <div>
                 <p class="section-number">QUICKSEND ME AN EMAIL!</p>
@@ -63,7 +65,6 @@
         </section>
     </main>
 
-    <!-- # ABOUT PAGE FOOTER — Keep this aligned with the footer on the landing page. -->
     <footer>
         <p>imcj © 2026</p>
         <a href="index.html">Back to portfolio ↑</a>

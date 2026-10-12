@@ -6,6 +6,10 @@
     <meta name="description" content="CROSSROADS — a visual novel project by imcj.">
     <title>CROSSROADS — imcj</title>
     <link rel="stylesheet" href="style.css">
+    <!-- # CASE STUDY STYLES — Include this file on any page that reuses the sections below. -->
+    <link rel="stylesheet" href="project-sections.css">
+    <!-- # GALLERY VIEWER — Include this script on other pages to make their case-study images expandable. -->
+    <script defer src="gallery-viewer.js"></script>
 </head>
 <body class="project-page-body">
     <!-- # PROJECT PAGE HEADER — Keep these links matched with the Home and About headers. -->
@@ -20,33 +24,225 @@
 
     <main class="project-page-main">
         <article class="project-detail">
-            <!-- # CROSSROADS TITLE — Edit the project name and short description here. -->
-            <header class="project-detail-heading">
-                <div>
-                    <p class="section-number">PROJECT / 03</p>
-                    <h1>CROSSROADS</h1>
-                </div>
-                <p class="project-detail-type">Visual Novel / 2024</p>
-            </header>
+            <section class="project-landing" aria-labelledby="crossroads-title">
+                <div class="project-landing-copy">
+                    <!-- # CROSSROADS TITLE — Edit the project number and name here. -->
+                    <header class="project-detail-heading">
+                    <p class="section-number">PROJECT / 02</p>
+                        <h1 id="crossroads-title">CROSSROADS</h1>
+                    </header>
 
-            <!-- # CROSSROADS BANNER — Replace this filename if you update the project banner. -->
-            <img class="project-detail-banner" src="banner_crossroads.png" alt="CROSSROADS project banner">
+                    <!-- # CROSSROADS TAGS — Edit, add, or remove these bordered project facts. -->
+                    <ul class="project-tag-list" aria-label="CROSSROADS project information">
+                        <li>Visual Novel</li>
+                        <li>2024</li>
+                        <li>4 months</li>
+                        <li>Solo project</li>
+                        <li>Ren’Py, Photoshop, Procreate</li>
+                        <li>Designer, writer, programmer</li>
+                    </ul>
 
-            <section class="project-detail-information" aria-labelledby="crossroads-details">
-                <p class="section-number">ABOUT THE PROJECT</p>
-                <div class="project-detail-copy">
-                    <h2 id="crossroads-details">Project details</h2>
-                    <p>Add your detailed CROSSROADS project description, role, process, tools, and outcome here.</p>
+                    <!-- # CROSSROADS DESCRIPTION — Replace this placeholder with your final project summary. -->
+                    <div class="project-detail-description">
+                        <p class="section-number">PROJECT DESCRIPTION</p>
+                        <p><b><i>“I want to befriend them, they seem like a nice friend...”</i></b><br>
+
+                        <br>Nothing will come after that if we just stop at looking at people from afar and make assumptions even though we want to make friends. The alleyways where Thu, Dan, and Duong meet in their same dream - taken inspiration from Vietnamese Hems where the crossroads and cables intertwine with each other crazily just like humans' connections!
+                        <br>
+                        <br><i>Scroll down for more details</i></p>
+                    </div>
                 </div>
+
+                <!-- # CROSSROADS POSTER — Change the filename here when you update the poster. -->
+                <img class="project-poster" src="poster_crossroads.png" alt="CROSSROADS project poster">
             </section>
 
             <a class="project-page-back" href="index.html#work">← Back to projects</a>
+
+            
         </article>
+
+        <!-- # CROSSROADS FEATURED WORKS — Edit the card names here and their displayed content in crossroads.js. -->
+        <!-- <section class="crossroads-featured" aria-labelledby="crossroads-featured-title">
+            <header class="crossroads-featured-heading">
+                <div>
+                    <p class="section-number">02 / FEATURED WORKS</p>
+                    <h2 id="crossroads-featured-title">Click a card.</h2>
+                </div>
+                <p class="crossroads-featured-instruction">Click a category card to see its work.<br>Click the selected card in the slot to put it back.</p>
+            </header>
+
+            <div class="crossroads-selector-layout">
+                <div class="crossroads-card-list" aria-label="CROSSROADS artwork categories">
+                    <button class="crossroads-category-card" type="button" data-crossroads-category="characters" aria-pressed="false">
+                        <span class="crossroads-card-number">01</span>
+                        <span class="crossroads-card-title">Character Design</span>
+                        <span class="crossroads-card-action">Click to select</span>
+                    </button>
+                    <button class="crossroads-category-card" type="button" data-crossroads-category="backgrounds" aria-pressed="false">
+                        <span class="crossroads-card-number">02</span>
+                        <span class="crossroads-card-title">Backgrounds</span>
+                        <span class="crossroads-card-action">Click to select</span>
+                    </button>
+                    <button class="crossroads-category-card" type="button" data-crossroads-category="cgs" aria-pressed="false">
+                        <span class="crossroads-card-number">03</span>
+                        <span class="crossroads-card-title">CGs</span>
+                        <span class="crossroads-card-action">Click to select</span>
+                    </button>
+                </div>
+
+                <div class="crossroads-slot-wrap">
+                    <p class="crossroads-slot-label">Category slot</p>
+                    <div class="crossroads-card-slot" id="crossroadsCardSlot">
+                        <span class="crossroads-slot-placeholder">Selected card</span>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- # CROSSROADS DISPLAY SECTION — crossroads.js replaces this title, description, and image placeholders. -->
+        <!-- <section class="crossroads-showcase" id="crossroadsShowcase" aria-labelledby="crossroadsShowcaseTitle" aria-live="polite" hidden>
+            <div class="crossroads-showcase-heading">
+                <p class="section-number">DISPLAYING</p>
+                <h2 id="crossroadsShowcaseTitle">Character Design</h2>
+                <p id="crossroadsShowcaseDescription">Add your Character Design description here.</p>
+            </div>
+            <div class="crossroads-showcase-gallery" id="crossroadsShowcaseGallery"></div>
+        </section> -->
+        <!-- # REUSABLE CASE STUDY — Copy this wrapper to another project and include project-sections.css after style.css.
+             Change each section's unique id, aria-labelledby, number, heading, and paragraphs.
+             The old card blocks above are left commented out, preserving your current changes. -->
+        <div class="case-study">
+            <!-- # SECTION 01 — Replace the bracketed explanation with your own process and design decisions. -->
+            <section class="case-study-section" aria-labelledby="character-design-title">
+                <div class="case-study-heading">
+                    <!-- # SECTION TITLE — Keep the number above the Schoolbell heading in the left column. -->
+                    <header class="case-study-title">
+                        <p class="case-study-number">01</p>
+                        <h2 id="character-design-title">Character Design</h2>
+                    </header>
+                    <div class="case-study-copy">
+                        <p><b>3 characters = 3 different personalities = 3 different starter colors.</b>
+                        <br>Blue = Cold tone depicts Introversion
+                        <br>Red = Hot tone depicts Extroversion
+                        <br>Yellow = Neutral tone depicts Ambiversion
+                        <br>Greyscale = Shades & Hues = The characters’ surroundings that forms their tones.
+                        <br>
+                        <br><b>Why 3 starter colors + greyscales?</b>
+                        <br>My idea is that when 3 of them make an effort to connect and open up, they will “see more colors” in life as they mixed their personalities together. However if they avoid to do so, their life will be just monotonous ever.
+                        <br>
+                        <br><b>Why pastel-y colors? </b>
+                        <br>These vintage shades also come from Saigon’s old alleyways, which I want to bring in my story environment since I have been living here for quite some time to do my study.</p>
+                        <!-- <p>[Use this paragraph to walk through your design process, from early silhouettes and outfit studies to expressions and final character sheets. Discuss a design choice you revised, why you changed it, and how the finished artwork supports the character’s role in CROSSROADS.]</p> -->
+                    </div>
+                </div>
+                <!-- # THREE-COLUMN GALLERY — Add figures in reading order; every three images start a new row.
+                     Replace a placeholder span with <img src="your-image.png" alt="Describe your artwork" loading="lazy">.
+                     Images keep their proportions and are never cropped. -->
+                <div class="case-study-gallery" role="region" aria-label="Character Design image gallery">
+                    <figure class="case-study-image"><img src="Crossroads/anhthu.PNG" alt="Anh Thu Sprites" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/linhdan.PNG" alt="Linh Dan Sprites" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/thaiduong.PNG" alt="Thai Duong Sprites" loading="lazy"></figure>
+                </div>
+            </section>
+
+            <!-- # SECTION 02 — Replace the bracketed explanation with your own process and design decisions. -->
+            <section class="case-study-section" aria-labelledby="backgrounds-title">
+                <div class="case-study-heading">
+                    <!-- # SECTION TITLE — Keep the number above the Schoolbell heading in the left column. -->
+                    <header class="case-study-title">
+                        <p class="case-study-number">02</p>
+                        <h2 id="backgrounds-title">Backgrounds</h2>
+                    </header>
+                    <div class="case-study-copy">
+                        <p>Real Inspiration from the pictures I took of alleyways in District 4 HCMC (Hem Doan Van Bo) - where there are a lot of significant and typical Hem’s traits.</p>
+                        <p>I used real alleys as my inspiration because as I mentioned above,  I thought it’d be nice to bring in some authenticity of my living city as well as putting the concept of connectivity through the abstract meaning of Hems - conections, lost, ...  Additionally, by installing the iconic messy electric cables of us Vietnamese into the backgrounds and use them as passive guides along the story is also another way of me depicting connections in this project. 
+                        <br>
+                        <br>With the main color to be grey, the backgrounds create good contrast with the characters without being too distracting despite all the details.</p>
+                    </div>
+                </div>
+                <!-- # THREE-COLUMN GALLERY — Add figures in reading order; every three images start a new row.
+                     Replace a placeholder span with <img src="your-image.png" alt="Describe your artwork" loading="lazy">.
+                     Images keep their proportions and are never cropped. -->
+                <div class="case-study-gallery" role="region" aria-label="Backgrounds image gallery">
+                    <figure class="case-study-image"><img src="Crossroads/bg%20blueroute.PNG" alt="Blue route background artwork — temporary background / cg image 01" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg bluerouteb4rain.PNG" alt="Blue route background artwork — temporary background / cg image 02" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg bluerouterain.PNG" alt="Blue route background artwork — temporary background / cg image 03" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg scene2.PNG" alt="Blue route background artwork — temporary background / cg image 04" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg yellowroute.PNG" alt="Blue route background artwork — temporary background / cg image 05" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg redroute.PNG" alt="Blue route background artwork — temporary background / cg image 06" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg scene1.PNG" alt="Blue route background artwork — temporary background / cg image 07" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg dedendrain.PNG" alt="Blue route background artwork — temporary background / cg image 08" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg wayouttrue.PNG" alt="Blue route background artwork — temporary background / cg image 09" loading="lazy"></figure>
+
+                </div>
+            </section>
+
+            <!-- # SECTION 03 — Replace this CG explanation and the temporary images with your finished illustrations. -->
+            <section class="case-study-section" aria-labelledby="cgs-title">
+                <div class="case-study-heading">
+                    <header class="case-study-title">
+                        <p class="case-study-number">03</p>
+                        <h2 id="cgs-title">CGs</h2>
+                    </header>
+                    <div class="case-study-copy">
+                        <p>All Included CGs in-app.</p>
+                        <p>The ones that have base color of Blue, Red and Yellow are Opening CGs or Side Endings CGs.
+                        <br>The ones with simple greyscaled backgrounds are CGs encountered while in the middle of exploring the story.
+                        <br>The ones with colorful backgrounds are Main Endings CGs.</p>
+                    </div>
+                </div>
+                <!-- # CG GALLERY — Change each src and alt below; images run left to right, three per row.
+                     The shared gallery viewer automatically enables click-to-enlarge for every image. -->
+                <div class="case-study-gallery" role="region" aria-label="CGs image gallery">
+                    <figure class="case-study-image"><img src="Crossroads/bg thuseesduong.PNG" alt="Blue route background artwork — temporary background / cg image 01" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg danseesthu.PNG" alt="Blue route background artwork — temporary background / cg image 02" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg duongseesdan.PNG" alt="Blue route background artwork — temporary background / cg image 03" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg sleep.PNG" alt="Blue route background artwork — temporary background / cg image 04" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg sleep2.PNG" alt="Blue route background artwork — temporary background / cg image 05" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg blueend1.PNG" alt="Blue route background artwork — temporary background / cg image 06" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg ddfight.png" alt="Blue route background artwork — temporary background / cg image 07" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg isdanok.PNG" alt="Blue route background artwork — temporary background / cg image 08" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg thureturned.PNG" alt="Blue route background artwork — temporary background / cg image 09" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg thualone.PNG" alt="Blue route background artwork — temporary background / cg image 10" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg thulost.PNG" alt="Blue route background artwork — temporary background / cg image 11" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg thuhands.PNG" alt="Blue route background artwork — temporary background / cg image 12" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg danbroken.PNG" alt="Blue route background artwork — temporary background / cg image 13" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg duongbroken.png" alt="Blue route background artwork — temporary background / cg image 14" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg trueend.PNG" alt="Blue route background artwork — temporary background / cg image 15" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg greenend.PNG" alt="Blue route background artwork — temporary background / cg image 16" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg orangeend.PNG" alt="Blue route background artwork — temporary background / cg image 17" loading="lazy"></figure>
+                    <figure class="case-study-image"><img src="Crossroads/bg purpleend.PNG" alt="Blue route background artwork — temporary background / cg image 18" loading="lazy"></figure>
+                </div>
+            </section>
+
+            <!-- # SECTION 04 — Replace the explanation and change the video ID in BOTH URLs when reusing this block. -->
+            <section class="case-study-section" aria-labelledby="playthrough-title">
+                <div class="case-study-heading">
+                    <!-- # SECTION TITLE — Keep the number above the Schoolbell heading in the left column. -->
+                    <header class="case-study-title">
+                        <p class="case-study-number">04</p>
+                        <h2 id="playthrough-title">Playthrough Demo</h2>
+                    </header>
+                    <div class="case-study-copy">
+                        <p>Full playthrough of CROSSROADS from RPG Visual on Youtube!</p>
+                    </div>
+                </div>
+                <!-- # VIDEO PLAYER — Responsive 16:9 player; playback starts only when the visitor chooses it. -->
+                <div class="case-study-video">
+                    <iframe src="https://www.youtube-nocookie.com/embed/08qnpzdQeQA"
+                        title="CROSSROADS — Playthrough Demo by RPG Visual" loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="case-study-video-link"><a href="https://www.youtube.com/watch?v=08qnpzdQeQA" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></p>
+            </section>
+        </div>
     </main>
 
     <footer>
         <p>imcj © 2026</p>
-        <a href="index.html#work">Back to projects ↑</a>
+        <a href="#top">Back to top ↑</a>
     </footer>
 </body>
 </html>
