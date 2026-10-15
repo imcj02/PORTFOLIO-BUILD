@@ -45,8 +45,8 @@ const projectData = {
 
         ],
         projects: [
-            { title: "", note: "", image: "illus/AIPconcept1.png" }, // #0
-            { title: "", note: "", image: "illus/AIPconcept2.png" },
+            { title: "", note: "", image: "illus/AIPconcept1.PNG" }, // #0
+            { title: "", note: "", image: "illus/AIPconcept2.PNG" },
             { title: "", note: "", image: "illus/AIP1.png" },
             { title: "", note: "", image: "illus/AIPblue2.png" },
             { title: "", note: "", image: "illus/AIPblue.png" },
@@ -60,16 +60,16 @@ const projectData = {
             { title: "", note: "", image: "illus/AIPred2.png" }, 
             { title: "", note: "", image: "illus/AIPred.png" }, 
             { title: "", note: "", image: "illus/AIP4.png" },
-            { title: "", note: "", image: "illus/AIPcomic1.png" }, // #15
+            { title: "", note: "", image: "illus/AIPcomic1.PNG" }, // #15
             { title: "", note: "", image: "illus/AIPcomic2.png" },
             { title: "", note: "", image: "illus/AIPcomic3.png" }, 
             { title: "", note: "", image: "illus/AIPcomic4.png" }, 
             { title: "", note: "", image: "illus/AIPcomic5.png" }, 
             { title: "", note: "", image: "illus/AIPinitial.png" }, // #20 (END of AIP)
-            { title: "Anh Thu", note: "crossroads extension", image: "illus/crossroadspin1.png" }, 
-            { title: "Linh Dan", note: "crossroads extension", image: "illus/crossroadspin2.png" },
-            { title: "Thai Duong", note: "crossroads extension", image: "illus/crossroadspin3.png" }, 
-            { title: "Pin Design", note: "crossroads extension", image: "illus/crossroadspin4.png" }, 
+            { title: "Anh Thu", note: "crossroads extension", image: "illus/crossroadspin1.PNG" }, 
+            { title: "Linh Dan", note: "crossroads extension", image: "illus/crossroadspin2.PNG" },
+            { title: "Thai Duong", note: "crossroads extension", image: "illus/crossroadspin3.PNG" }, 
+            { title: "Pin Design", note: "crossroads extension", image: "illus/crossroadspin4.PNG" }, 
             { title: "Crossroads Girls", note: "crossroads extension", image: "illus/crossroadsduo.jpeg" }, // #25
             { title: "Experimental", note: "illustration", image: "illus/exp1.jpeg" }, 
             { title: "Experimental", note: "storyboard", image: "illus/storyboard1.jpeg" },
