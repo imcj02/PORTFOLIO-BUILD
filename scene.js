@@ -20,13 +20,64 @@ const projectData = {
     illustration: {
         title: "Illustration",
         layout: "gallery",
+        // # ILLUSTRATION SUBSECTIONS — Rename these headings and explanations.
+        // imageIndexes selects images from the projects list below, starting at 0; each image can be reused.
+        sections: [
+            {title: "FROM NOW ON - Social Comic Package for AIP Foundation", description: "AIP Foundation has always aiming for  a world without road injuries and injustices. Through comics, AIP aims to engage younger audiences in the concept of mobility and beyond: the problems in mobility that related to injustices and their impact on the world’s environment. Out of 5 proposals provided by my teammates and I, AIP chose my brief, that was why I became the Art Director of this project. The package includes 5 comic strips for social posts, 4 character designs and 4 infographics.", imageIndexes: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+            // # DETAIL BOXES — Edit the text inside the quotation marks.
+            facts: {
+            type: "Social Comic",
+            year: "2023",
+            duration: "2 months",
+            team: "Group Project",
+            tools: "Photoshop, Procreate, InDesign",
+            roles: "Art Director, Character Designer, Storyboarder, Illustrator"} },
+
+            {title: "Single Works", description: "Experimental with different styles", imageIndexes: [21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32],
+            // # DETAIL BOXES — Edit the text inside the quotation marks.
+            facts: {
+            type: "Illustration",
+            year: "2026",
+            duration: "2 months",
+            team: "Solo Project",
+            tools: "Photoshop, Procreate",
+            roles: "Illustration, Character Design"} },
+
+        ],
         projects: [
-            { title: "TBD", note: "[Notes / Year]",image: "banner_acadoriginal.png"},
-            { title: "TBD", note: "[Notes / Year]", image: "banner_acadoriginal.png" },
-            { title: "TBD", note: "[Notes / Year]", image: "banner_acadoriginal.png" },
-            { title: "TBD", note: "[Notes / Year]", image: "banner_acadoriginal.png" },
-            { title: "TBD", note: "[Notes / Year]", image: "banner_acadoriginal.png" },
-            { title: "TBD", note: "[Notes / Year]", image: "banner_acadoriginal.png" },
+            { title: "", note: "", image: "illus/AIPconcept1.png" }, // #0
+            { title: "", note: "", image: "illus/AIPconcept2.png" },
+            { title: "", note: "", image: "illus/AIP1.png" },
+            { title: "", note: "", image: "illus/AIPblue2.png" },
+            { title: "", note: "", image: "illus/AIPblue.png" },
+            { title: "", note: "", image: "illus/AIP3.png" }, // #5
+            { title: "", note: "", image: "illus/AIPgreen2.png" }, 
+            { title: "", note: "", image: "illus/AIPgreen.png" },
+            { title: "", note: "", image: "illus/AIP5.png" },
+            { title: "", note: "", image: "illus/AIPyellow2.png" },
+            { title: "", note: "", image: "illus/AIPyellow.png" }, // #10
+            { title: "", note: "", image: "illus/AIP2.png" }, 
+            { title: "", note: "", image: "illus/AIPred2.png" }, 
+            { title: "", note: "", image: "illus/AIPred.png" }, 
+            { title: "", note: "", image: "illus/AIP4.png" },
+            { title: "", note: "", image: "illus/AIPcomic1.png" }, // #15
+            { title: "", note: "", image: "illus/AIPcomic2.png" },
+            { title: "", note: "", image: "illus/AIPcomic3.png" }, 
+            { title: "", note: "", image: "illus/AIPcomic4.png" }, 
+            { title: "", note: "", image: "illus/AIPcomic5.png" }, 
+            { title: "", note: "", image: "illus/AIPinitial.png" }, // #20 (END of AIP)
+            { title: "Anh Thu", note: "crossroads extension", image: "illus/crossroadspin1.png" }, 
+            { title: "Linh Dan", note: "crossroads extension", image: "illus/crossroadspin2.png" },
+            { title: "Thai Duong", note: "crossroads extension", image: "illus/crossroadspin3.png" }, 
+            { title: "Pin Design", note: "crossroads extension", image: "illus/crossroadspin4.png" }, 
+            { title: "Crossroads Girls", note: "crossroads extension", image: "illus/crossroadsduo.jpeg" }, // #25
+            { title: "Experimental", note: "illustration", image: "illus/exp1.jpeg" }, 
+            { title: "Experimental", note: "storyboard", image: "illus/storyboard1.jpeg" },
+            { title: "Experimental", note: "illustration", image: "illus/exp2.jpeg" }, 
+            { title: "Experimental", note: "storyboard", image: "illus/storyboard2.jpeg" },
+            { title: "Experimental", note: "for @_jenny_art_", image: "illus/jennyart1.jpeg" }, // #30
+            { title: "Experimental", note: "for @_jenny_art_", image: "illus/jennyart2.jpeg" },
+            { title: "Experimental", note: "for @sketchycaulfield", image: "illus/springspider.jpeg" },
         ],
     },
 }
@@ -131,14 +182,94 @@ function makeGalleryItem(item, index) {
     return figure
 }
 
-// # SHOW PROJECTS — Uses a gallery only for Illustration; other categories keep the horizontal list.
+// # ILLUSTRATION SECTION — Reuses the project-page layout: numbered title, explanation, then three-column images.
+function makeIllustrationSection(section, index, images) {
+    const element = document.createElement("section")
+    element.className = "case-study-section"
+    const titleId = "illustration-section-" + (index + 1)
+    element.setAttribute("aria-labelledby", titleId)
+    element.innerHTML = `
+        <div class="case-study-heading">
+            <header class="case-study-title">
+                <p class="case-study-number">${String(index + 1).padStart(2, "0")}</p>
+                <h2 id="${titleId}"></h2>
+            </header>
+            <div class="case-study-copy">
+                <div class="illustration-facts" aria-label="Collection details"></div>
+                <p></p>
+            </div>
+        </div>
+        <div class="case-study-gallery" role="region"></div>
+    `
+    element.querySelector("h2").textContent = section.title
+    element.querySelector(".case-study-copy p").textContent = section.description
+    // # COLLECTION BOXES — Add facts: { type: "...", year: "...", duration: "...", team: "...",
+    // tools: "...", roles: "..." } to a section above. Missing values display editable placeholders.
+    const facts = section.facts || {}
+    const rows = [
+        [["type", "[Type]"], ["year", "[Year]"], ["duration", "[Duration]"], ["team", "[Solo / Team]"]],
+        [["tools", "[Tools]"], ["roles", "[Roles]"]],
+    ]
+    rows.forEach((fields, rowIndex) => {
+        const row = document.createElement("ul")
+        row.className = "illustration-facts-row"
+        row.setAttribute("aria-label", rowIndex === 0 ? "Type, year, duration and team" : "Tools and roles")
+        fields.forEach(([key, fallback]) => {
+            const box = document.createElement("li")
+            box.textContent = facts[key] || fallback
+            row.append(box)
+        })
+        element.querySelector(".illustration-facts").append(row)
+    })
+    const gallery = element.querySelector(".case-study-gallery")
+    gallery.setAttribute("aria-label", section.title + " artwork")
+    section.imageIndexes.forEach((imageIndex) => {
+        const item = images[imageIndex]
+        if (!item) return
+        const figure = document.createElement("figure")
+        figure.className = "gallery-item"
+        const frame = document.createElement("div")
+        frame.className = "case-study-image"
+        if (item.image) {
+            const image = document.createElement("img")
+            image.src = item.image
+            image.alt = item.title + " — " + item.note
+            image.loading = "lazy"
+            frame.append(image)
+        } else {
+            const placeholder = document.createElement("span")
+            placeholder.textContent = "Image placeholder " + (imageIndex + 1)
+            frame.append(placeholder)
+        }
+        // # IMAGE CAPTIONS — Edit each illustration's title and note in projectData above.
+        const caption = document.createElement("figcaption")
+        caption.className = "gallery-caption"
+        const title = document.createElement("h4")
+        title.textContent = item.title
+        const note = document.createElement("p")
+        note.textContent = item.note
+        caption.append(title, note)
+        figure.append(frame, caption)
+        gallery.append(figure)
+    })
+    return element
+}
+
+// # SHOW PROJECTS — Illustration uses stacked subsections; other categories keep the horizontal list.
 function renderProjects(category) {
     const data = projectData[category]
     const isGallery = data.layout === "gallery"
     projectsTitle.textContent = data.title
     projectsHint.textContent = isGallery ? "Gallery view" : "Scroll sideways for more projects →"
     projectTrack.classList.toggle("is-gallery", isGallery)
-    projectTrack.replaceChildren(...data.projects.map(isGallery ? makeGalleryItem : makeProjectCard))
+    projectTrack.classList.toggle("is-illustration-sections", isGallery)
+    if (isGallery) {
+        projectTrack.replaceChildren(...data.sections.map((section, index) =>
+            makeIllustrationSection(section, index, data.projects)))
+        window.initializeGalleryViewer?.(projectTrack)
+    } else {
+        projectTrack.replaceChildren(...data.projects.map(makeProjectCard))
+    }
     projects.hidden = false
     projects.classList.remove("is-visible")
     requestAnimationFrame(() => projects.classList.add("is-visible"))

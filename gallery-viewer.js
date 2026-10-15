@@ -1,7 +1,5 @@
 /* # REUSABLE GALLERY VIEWER — Works with every image inside .case-study-gallery. */
 (() => {
-    const photos = document.querySelectorAll('.case-study-gallery .case-study-image img');
-    if (!photos.length) return;
 
     /* # OVERLAY — Native dialog keeps keyboard focus inside and supports Escape to close. */
     const viewer = document.createElement('dialog');
@@ -35,7 +33,10 @@
     }
 
     /* # CLICKABLE PHOTOS — Buttons preserve the existing frame and support Enter/Space as well as touch. */
-    photos.forEach((photo) => {
+    // # DYNAMIC GALLERIES — Call after rendering new sections; already-wrapped images are skipped.
+    function initializeGalleryViewer(root = document) {
+    root.querySelectorAll('.case-study-gallery .case-study-image img').forEach((photo) => {
+        if (photo.closest('.gallery-image-button')) return;
         const button = document.createElement('button');
         button.type = 'button';
         button.className = 'gallery-image-button';
@@ -45,6 +46,9 @@
         button.append(photo);
         button.addEventListener('click', () => openImage(photo, button));
     });
+    }
+    window.initializeGalleryViewer = initializeGalleryViewer;
+    initializeGalleryViewer();
 
     /* # CLOSE ACTIONS — Use the X, Escape, or click the empty area around the image. */
     closeButton.addEventListener('click', () => viewer.close());
