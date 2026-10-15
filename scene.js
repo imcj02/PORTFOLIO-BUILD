@@ -60,7 +60,7 @@ const projectData = {
             { title: "", note: "", image: "illus/AIPred2.png" }, 
             { title: "", note: "", image: "illus/AIPred.png" }, 
             { title: "", note: "", image: "illus/AIP4.png" },
-            { title: "", note: "", image: "illus/AIPcomic1.PNG" }, // #15
+            { title: "", note: "", image: "illus/AIPcomic1.png" }, // #15
             { title: "", note: "", image: "illus/AIPcomic2.png" },
             { title: "", note: "", image: "illus/AIPcomic3.png" }, 
             { title: "", note: "", image: "illus/AIPcomic4.png" }, 
